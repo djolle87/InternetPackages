@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="432.0" prefWidth="1133.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.FXMLController">
+    <stylesheets>
+        <URL value="@fxml.css" />
+    </stylesheets>
+   <children>
+      <BorderPane fx:id="borderPane" prefHeight="422.0" prefWidth="1125.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="3.0" AnchorPane.topAnchor="5.0">
+         <left>
+            <GridPane BorderPane.alignment="CENTER">
+              <columnConstraints>
+                <ColumnConstraints hgrow="NEVER" maxWidth="99.0" minWidth="10.0" prefWidth="70.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="151.0" minWidth="10.0" prefWidth="139.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="0.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="55.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="Speed:">
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </Label>
+                  <Label text="Capacity:" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets left="5.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label text="Contract:" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets left="5.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <TextField fx:id="firstName" maxWidth="130.0" prefHeight="25.0" prefWidth="130.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <TextField fx:id="lastName" maxWidth="130.0" prefHeight="25.0" prefWidth="130.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <Label text="First name:" GridPane.rowIndex="3">
+                     <GridPane.margin>
+                        <Insets left="5.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label text="Last name:" GridPane.rowIndex="4">
+                     <GridPane.margin>
+                        <Insets left="5.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label prefHeight="17.0" prefWidth="68.0" text="Account ID:" GridPane.rowIndex="7">
+                     <GridPane.margin>
+                        <Insets left="5.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label fx:id="accId" prefHeight="17.0" prefWidth="124.0" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                     <GridPane.margin>
+                        <Insets left="6.0" />
+                     </GridPane.margin></Label>
+                  <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="8" GridPane.vgrow="ALWAYS">
+                     <children>
+                        <Button fx:id="save" alignment="BOTTOM_CENTER" maxWidth="60.0" mnemonicParsing="false" onAction="#saveAccount" prefWidth="60.0" text="Save">
+                           <HBox.margin>
+                              <Insets right="14.0" top="7.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="clear1" alignment="BOTTOM_CENTER" maxWidth="60.0" mnemonicParsing="false" onAction="#clearAccount" prefWidth="60.0" text="Clear">
+                           <HBox.margin>
+                              <Insets top="7.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <VBox GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <children>
+                        <RadioButton fx:id="oneYearRBtn" mnemonicParsing="false" selected="true" text="one year">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="contractGroup" />
+                           </toggleGroup>
+                           <padding>
+                              <Insets top="10.0" />
+                           </padding>
+                        </RadioButton>
+                        <RadioButton fx:id="twoYearsRBtn" mnemonicParsing="false" text="two years" toggleGroup="$contractGroup">
+                           <padding>
+                              <Insets top="5.0" />
+                           </padding>
+                        </RadioButton>
+                     </children>
+                  </VBox>
+                  <ComboBox fx:id="speedComboBox" prefHeight="25.0" prefWidth="130.0" GridPane.columnIndex="1" />
+                  <ComboBox fx:id="capacityComboBox" prefHeight="25.0" prefWidth="130.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Label text="Address:" GridPane.rowIndex="5">
+                     <GridPane.margin>
+                        <Insets left="5.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label text="Email:" GridPane.rowIndex="6">
+                     <GridPane.margin>
+                        <Insets left="5.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <TextField fx:id="address" maxWidth="130.0" prefWidth="130.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                  <TextField fx:id="email" maxWidth="130.0" prefWidth="130.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+               </children>
+            </GridPane>
+         </left>
+         <bottom>
+            <VBox prefHeight="17.0" prefWidth="599.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Separator prefHeight="0.0" prefWidth="599.0" />
+                  <Label alignment="BASELINE_RIGHT" contentDisplay="BOTTOM" nodeOrientation="RIGHT_TO_LEFT" prefHeight="17.0" prefWidth="1121.0" text="© djolle87@gmail.com" textAlignment="RIGHT" />
+               </children>
+            </VBox>
+         </bottom>
+         <top>
+            <VBox prefHeight="22.0" prefWidth="685.0" BorderPane.alignment="CENTER">
+               <children>
+                  <GridPane>
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="315.0" minWidth="10.0" prefWidth="215.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="811.0" minWidth="10.0" prefWidth="701.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="247.0" minWidth="2.0" prefWidth="206.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="248.0" text="Make new contract:" GridPane.halignment="LEFT">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font></Label>
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="709.0" text="List of all contracts:" GridPane.columnIndex="1" GridPane.halignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font></Label>
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="204.0" text="Delete contract:" GridPane.columnIndex="2" GridPane.halignment="RIGHT">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font></Label>
+                     </children>
+                  </GridPane>
+                  <Separator prefWidth="200.0" />
+               </children>
+            </VBox>
+         </top>
+         <center>
+            <BorderPane prefHeight="379.0" prefWidth="250.0" BorderPane.alignment="CENTER">
+               <left>
+                  <Separator orientation="VERTICAL" prefHeight="200.0" BorderPane.alignment="CENTER" />
+               </left>
+               <center>
+                  <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <TableView fx:id="table" prefHeight="381.0" VBox.vgrow="ALWAYS">
+                          <columns>
+                            <TableColumn fx:id="column1" prefWidth="75.0" text="First name" />
+                            <TableColumn fx:id="column2" prefWidth="101.0" text="Last name" />
+                              <TableColumn fx:id="column3" prefWidth="134.0" text="Address" />
+                              <TableColumn fx:id="column4" minWidth="8.0" prefWidth="116.0" text="Email" />
+                              <TableColumn fx:id="column5" minWidth="0.0" prefWidth="78.0" text="Account ID" />
+                              <TableColumn fx:id="column6" prefWidth="67.0" text="Speed" />
+                              <TableColumn fx:id="column7" prefWidth="68.0" text="Capacity" />
+                              <TableColumn fx:id="column8" prefWidth="70.0" text="Contract" />
+                          </columns>
+                           <VBox.margin>
+                              <Insets bottom="8.0" left="1.0" right="3.0" />
+                           </VBox.margin>
+                        </TableView>
+                     </children>
+                     <padding>
+                        <Insets top="7.0" />
+                     </padding>
+                  </VBox>
+               </center>
+               <right>
+                  <Separator orientation="VERTICAL" prefHeight="200.0" BorderPane.alignment="CENTER" />
+               </right>
+            </BorderPane>
+         </center>
+         <right>
+            <GridPane BorderPane.alignment="CENTER">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="94.0" minWidth="10.0" prefWidth="72.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="136.0" minWidth="10.0" prefWidth="128.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="NEVER" />
+                <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="NEVER" />
+                <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="NEVER" />
+                  <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="NEVER" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="First name:" GridPane.vgrow="NEVER">
+                     <GridPane.margin>
+                        <Insets left="5.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label prefWidth="68.0" text="Last name:" GridPane.rowIndex="1" GridPane.vgrow="NEVER">
+                     <GridPane.margin>
+                        <Insets left="5.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label text="Account ID:" GridPane.rowIndex="2" GridPane.vgrow="NEVER">
+                     <GridPane.margin>
+                        <Insets left="5.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <TextField fx:id="firstNameDelete" maxWidth="130.0" prefWidth="130.0" GridPane.columnIndex="1" GridPane.vgrow="NEVER">
+                     <GridPane.margin>
+                        <Insets right="5.0" />
+                     </GridPane.margin>
+                  </TextField>
+                  <TextField fx:id="lastNameDelete" maxWidth="130.0" prefWidth="130.0" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.vgrow="NEVER">
+                     <GridPane.margin>
+                        <Insets right="5.0" />
+                     </GridPane.margin>
+                  </TextField>
+                  <TextField fx:id="accIdDelete" maxWidth="130.0" prefHeight="25.0" prefWidth="130.0" GridPane.columnIndex="1" GridPane.rowIndex="2" GridPane.vgrow="NEVER">
+                     <GridPane.margin>
+                        <Insets right="5.0" />
+                     </GridPane.margin>
+                  </TextField>
+                  <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <children>
+                        <Button fx:id="delete" alignment="BOTTOM_CENTER" maxWidth="60.0" mnemonicParsing="false" onAction="#deleteAccount" prefWidth="60.0" text="Delete">
+                           <HBox.margin>
+                              <Insets right="14.0" top="7.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="clear2" alignment="BOTTOM_CENTER" maxWidth="60.0" mnemonicParsing="false" onAction="#clearAccountDelete" prefWidth="60.0" text="Clear">
+                           <HBox.margin>
+                              <Insets right="5.0" top="7.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </GridPane>
+         </right>
+      </BorderPane>
+   </children>
+</AnchorPane>

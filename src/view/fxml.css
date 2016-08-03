@@ -1,0 +1,29 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+
+#borderPane{
+    /*    -fx-background-image:url("http://www.lindasabiston.com/backgrounds/gradient%20background%20more%20white.jpg");   */
+    -fx-background-image:url("../resources/background.jpg");   
+}
+
+.button:hover {
+    -fx-font-weight:bold;
+    -fx-effect: dropshadow(gaussian, gray, 10, 0.6, 4, 3);
+}
+
+.text-field:hover{
+    -fx-effect: dropshadow(gaussian, gray, 10, 0.6, 4, 3);
+}
+
+.combo-box:hover{
+    -fx-effect: dropshadow(gaussian, gray, 10, 0.6, 4, 3);
+}
+
+.radio-button:hover{
+    -fx-effect: dropshadow(gaussian, gray, 10, 0.6, 4, 3);
+}
